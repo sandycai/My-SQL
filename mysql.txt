@@ -1,0 +1,19 @@
+
+Create table BookCopy(
+copyId int auto_increment not null,
+ISBN varchar(15) not null,
+dateAcquired date not null,
+dateDestroyed date,
+primary key (copyId),
+constraint fk_book foreign key(ISBN) references Book(ISBN) 
+on update cascade 
+on delete no action
+); 
+
+CREATE TABLE TBL_ARTIST ( 
+ARTISTNO int(3), 
+ARTISTNAME VARCHAR(50) NOT NULL, 
+ARTISTDOB DATE, 
+ARTISTGENDER CHAR(1) CHECK (ARTISTGENDER IN ('F', 'M')), CONSTRAINT ARTIST_PK PRIMARY KEY (ARTISTNO)) engine InnoDB;
+
+
